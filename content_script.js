@@ -15,6 +15,7 @@ chrome.storage.local.get('url', function (result) {
 	    console.log(msg["resultObj"]["src"]);
 	    ret = msg["resultObj"]["src"];
 	    $('#player-src').val(msg["resultObj"]["src"]);
+	    $('#player-start').click();
 	  },
 	  fail: function() {
 	  	console.log("fail");

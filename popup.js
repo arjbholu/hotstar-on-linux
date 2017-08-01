@@ -1,6 +1,5 @@
 function clickHandler(e) {
   chrome.tabs.create({url: "https://www.hlsplayer.net/"});
-  // window.close(); // Note: window.close(), not this.close()
 }
 
 // function ajaxCall() {
