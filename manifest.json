@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Demo Content",
+  "description": "Change DOM element in Website",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts":["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*", "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.hlsplayer.net/*"],
+      "js": ["jquery-2.2.0.min.js", "content_script.js"],
+      "run_at": "document_end"
+    } 
+  ]
+}
